@@ -1,25 +1,48 @@
 import logo from './logo.svg';
 import './App.css';
+import { createContext } from 'react';
+import Signup from './Components/Signup/Signup';
+import Foodlist from './Pages/Foodlist/Foodlist';
+import Landing from './Pages/Landing/Landing';
+import { useEffect, useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Stock from './Pages/Stock/Stock';
+import Login from './Components/Login/Login';
+import { searchContext } from './Content/searchContent';
 
 function App() {
+  const [search, updateSearch] = useState("");
+  const [isLoggedin, setLoggedin] = useState(true);
+      useEffect(() =>{
+        if(localStorage.getItem("token") !=null) {
+          setLoggedin(true);
+        }
+      }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <searchContext.Provider
+    value={{ searchVariable: search, updateSearchVariable: updateSearch }}
+  >
+    <BrowserRouter>
+  
+    {isLoggedin && ( 
+    <Routes>
+    <Route path="/" element={<Landing />}>
+    <Route path="/foodlist" element={<Foodlist/>}></Route>
+    <Route path="/stock" element={<Stock/>}></Route>
+    </Route>
+     </Routes>
+    
+    )}
+    {!isLoggedin && (
+    <Routes>
+      <Route path='/' element={<Login/>}></Route>
+      <Route path='/signup' element={<Signup/>}></Route>
+    </Routes>
+    )}
+    </BrowserRouter>
+    </searchContext.Provider>
+    );
+  
 }
 
 export default App;
