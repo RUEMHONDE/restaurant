@@ -1,9 +1,9 @@
-.burgers{
+/* .burgers{
     display: flex;
     margin-left: 20px;
     overflow: scroll;
     justify-content: space-between;
-}
+} */
 .add-item{
     background-color:greenyellow;
     border: none;
@@ -24,11 +24,18 @@
     margin-left: 5px;
 }
 .pizza{
-    display: flex;
+    /* display: flex; */
     margin-left: 20px;
     overflow: scroll;
     justify-content: space-between;
 }
-items{
+.items{
+    margin-top: 60px;
+}
+.food{
+    display: flex;
+    overflow: scroll;
+    justify-content: space-between;
+    margin-left: 20px;
     margin-top: 60px;
 }

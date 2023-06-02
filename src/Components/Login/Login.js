@@ -71,7 +71,7 @@ export default function Login() {
           <div className='breaker'>
           <hr className='smallhr'></hr><span style={{verticalAlign:"top", opacity:"0.5", fontWeight:"bold"}}>OR</span><hr className='smallhr'></hr>
           </div>
-          <p className='tplogin'>Log in with Facebook</p>
+          <a href='https://www.facebook.com'><p className='tplogin'>Log in with Facebook</p></a>
           <p className='smallfont'>Forgot Password?</p>
         </div>
         
@@ -118,7 +118,7 @@ export default function Login() {
           <div className='breaker'>
           <hr className='smallhr'></hr><span style={{verticalAlign:"top", opacity:"0.5", fontWeight:"bold"}}>OR</span><hr className='smallhr'></hr>
           </div>
-          <p className='tplogin'>Log in with Facebook</p>
+          <a href='https://www.facebook.com'><p className='tplogin'>Log in with Facebook</p></a>
           <p className='smallfont'>Forgot Password?</p>
         </div>
         

@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Stock from './Pages/Stock/Stock';
 import Login from './Components/Login/Login';
 import { searchContext } from './Content/searchContent';
+import AddProducts from './Components/AddProduct/AddProducts';
 
 function App() {
   const [search, updateSearch] = useState("");
@@ -29,6 +30,7 @@ function App() {
     <Route path="/" element={<Landing />}>
     <Route path="/foodlist" element={<Foodlist/>}></Route>
     <Route path="/stock" element={<Stock/>}></Route>
+    <Route path='/addproducts' element={<AddProducts/>}></Route>
     </Route>
      </Routes>
     

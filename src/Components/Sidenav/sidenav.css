@@ -3,8 +3,8 @@
     margin-top: 10px;
 }
 .content-main{
-    margin-left: 20px;
-    width: 85%;
+    /* margin-left: 20px; */
+    width: 100%;
 }
 
 .name-container{
@@ -31,7 +31,7 @@
     margin-right: auto;
 }
 
-.display-picture{
+/* .display-picture{
     width: 120px;
     height: 115px;
     background-color: #fff;
@@ -42,7 +42,7 @@
     background-repeat: no-repeat;
     border: 2px solid palevioletred;
     padding: 2px;
-}
+} */
 
 .menulogo{
     height: 70px;
@@ -75,7 +75,7 @@
     border-right: 1px solid grey;
 }
 
-.social-ul li{
+.food-ul li{
     list-style: none;
     text-align: left;
 }

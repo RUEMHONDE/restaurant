@@ -1,4 +1,5 @@
 import React from 'react';
+import './landing.css';
 import Sidenav from '../../Components/Sidenav/Sidenav';
 import Stock from '../Stock/Stock';
 import Header from '../../Components/Header/Header';
@@ -10,7 +11,7 @@ export default function Landing() {
     <div>
       <div className='landing-container'>
             <div className='sidenav'>
-                {/* <Sidenav/> */}
+                <Sidenav/>
             </div>
             <div className='content-container'>
                 <Header/>

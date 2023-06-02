@@ -7,29 +7,7 @@ export default function Header() {
     <div>
         <header>
         <div className='header-content'>
-        <NavLink className="navlink" to="/foodlist"  style={({ isActive, isPending })=>{
-                return {
-                  
-                  color: isActive ? "red" : "black",
-                }
-              }}>
-                {" "}
-              <li>
-                  {/* <AppsOutlinedIcon /> */}
-                  <span className='menu-item'>Food List</span>
-                </li>
-              </NavLink>
-              <NavLink className="navlink" to="/stock"  style={({ isActive, isPending })=>{
-                return {
-                  
-                  color: isActive ? "red" : "black",
-                }
-              }}>
-                <li>
-                {/* <AppsOutlinedIcon /> */}
-                <span className='menu-item' >Stock</span>
-                </li>
-                </NavLink>
+      < marquee width="100%" behavior="alternate" bgcolor="green"><h1>ORDER YOUR FOOD FROM ANY RESTAURANT</h1></marquee>
                 
         </div>
       </header>

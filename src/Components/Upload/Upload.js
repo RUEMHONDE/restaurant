@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Box } from '@mui/system';
 import { InputLabel } from '@mui/material';
-import "./General.css";
+import "./uploads.css";
 import axios from 'axios';
 export default function General(props) {
   const [selectedFile, setFile] = useState();

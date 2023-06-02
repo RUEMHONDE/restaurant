@@ -80,10 +80,6 @@ export default function FoodList() {
     <>
    
     <div className='food'>
-
-    <div className="items">Number of items={itemCount}</div><br></br>
-    <div className='total'>Total Cost={result}</div>
-               
        
         {products.map((elem)=>{
       return ( <div className='burgers' >
@@ -106,12 +102,8 @@ export default function FoodList() {
       </div>
 </div>)
 })}    
-
-        
-        
-           {/* <ShoppingCartIcon /> */}
-          
-       
+   
+           {/* <ShoppingCartIcon /> */}      
         <br></br>
 {products.map((elem)=>{  
   return ( <div className='burgers' >
@@ -125,6 +117,7 @@ export default function FoodList() {
 })}
         
     </div>
+    <div className="items" >Number of items={itemCount}</div><br></br>
     <h2>Total cost: {result}</h2>
     </>
   )

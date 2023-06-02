@@ -1,0 +1,39 @@
+.product-input{
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.product-input-desc{
+    width: 90%;
+    height: 3  0px;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.category-dropdown{
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+}
+.upload{
+    border: 2px dotted black;
+    border-radius: 8px;
+    width: 80%;
+    height: 80%;
+    /* background-image: url("../images/book.jpg"); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 100px;
+    background-position-x: center;
+    background-position-y: center;
+    display: block;
+}
+::-webkit-file-upload-button {
+    display: none;
+ }
+ 
