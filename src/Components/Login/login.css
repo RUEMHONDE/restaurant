@@ -18,7 +18,7 @@
 .login-container{
     width: 60%;
     height: 650px;
-  
+    background-color: crimson;
 }
 .login-details{
     border: 1px solid #efefef;
@@ -43,7 +43,7 @@
 }
 .login{
     color: #efefef;
-    background-color: dodgerblue;
+    background-color: green;
     width: 75%;
     height: 35px;
     border: none;
@@ -66,11 +66,11 @@
     margin: 0 auto;
     text-align: center;
 }
-.tplogin{
+/* .tplogin{
     margin-top: 20px;
     color: #004f71;
     font-weight: bold;
-}
+} */
 .smallfont{
     font-size: 12px;
     color: #004f71;
@@ -98,8 +98,8 @@
     width: 50%;
     margin-left: 5px;
 }
-.signup{
-    background-color: dodgerblue;
+.signupbutton{
+    background-color: red;
     width: 75%;
     height: 35px;
     border: none;
@@ -110,4 +110,10 @@
     opacity: 0.8;
     cursor: pointer;
     margin-top: 5px;
+}
+/* .resheader{
+    text-align: center;
+} */
+.form__label{
+    text-align: center;
 }

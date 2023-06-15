@@ -1,0 +1,18 @@
+.heading{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.restaurants{
+    display: flex;
+    justify-content: start;
+    overflow: scroll;
+    width: 100%;
+}
+
+.restaurant{
+    margin-left: 20px;
+    margin-right: 0;
+    flex-shrink: 0;
+    cursor: pointer;
+}

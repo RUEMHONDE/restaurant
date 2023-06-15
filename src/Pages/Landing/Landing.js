@@ -15,7 +15,8 @@ export default function Landing() {
             </div>
             <div className='content-container'>
                 <Header/>
-                <Stock/>
+                {" "}
+                {/* <Stock/> */}
                 <div className="content">
                     <Outlet/>
                 </div>

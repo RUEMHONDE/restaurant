@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './foodlist.css';
 // import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-export default function FoodList() {
+export default function FoodList4() {
   const [result, setResult] = useState(0);
   const [cartitems, setCartitems] = useState([]);
   const [itemCount, setItemCount] = React.useState(0);
@@ -87,9 +87,8 @@ export default function FoodList() {
 })}       
            {/* <ShoppingCartIcon /> */}             
     </div>  
-    <div className="items"> 
-    <div >Number of items={itemCount}</div><span><h2>Total cost: {result}</h2></span>
-    <button className='checkout'>Check out</button>{result}
+    <div> 
+    <div className="items">Number of items={itemCount}</div><span><h2>Total cost: {result}</h2></span>
     </div>
     </>
   )

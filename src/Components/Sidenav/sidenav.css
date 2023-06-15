@@ -1,6 +1,7 @@
 .side-nav{
     text-align: center;
     margin-top: 10px;
+
 }
 .content-main{
     /* margin-left: 20px; */
@@ -25,6 +26,14 @@
     line-height: 24px;
 }
 
+.signout{
+    width: 80px;
+    height: 30px;
+    background-color: chocolate;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
 .social-links{
     margin-top: 20px;
     margin-left: auto;
@@ -44,7 +53,7 @@
     padding: 2px;
 } */
 
-.menulogo{
+/* .menulogo{
     height: 70px;
     width: 200px;
     margin-top: 10px;
@@ -55,9 +64,9 @@
     justify-content: space-evenly;
     width: 80%;
     margin: 20px auto;
-}
+} */
 
-.mini{
+/* .mini{
     width: 100px;
     
     margin: 0 auto;
@@ -70,20 +79,20 @@
 }
 .posts{
     border-right: 1px solid grey;
-}
-.followers{
+} */
+/* .followers{
     border-right: 1px solid grey;
-}
+} */
 
 .food-ul li{
     list-style: none;
     text-align: left;
 }
-.menu-item{
+/* .menu-item{
     margin-left: 10px;
     vertical-align: super;
     
-}
+} */
 .navlink{
     text-decoration: none;
 }
