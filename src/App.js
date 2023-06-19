@@ -19,7 +19,7 @@ function App() {
   const [search, updateSearch] = useState("");
   const [result, setResult] = useState(0);
   const [itemCount, setItemCount] = React.useState(0);
-  const [isLoggedin, setLoggedin] = useState(true);
+  const [isLoggedin, setLoggedin] = useState(false);
       useEffect(() =>{
         if(localStorage.getItem("token") !=null) {
           setLoggedin(true);

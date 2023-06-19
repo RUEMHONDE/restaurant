@@ -8,7 +8,7 @@ import RestaurantSignup from '../RestaurantSignup/RestaurantSignup';
 export default function Login() {
     const [formData, setformData] = useState({});
     const [signData, setsignData] = useState({});
-    
+    const navigate = useNavigate();
     const handleChange = (e)=>{
       setformData((prev)=>({
         ...prev, [e.target.name]:e.target.value,
@@ -19,10 +19,12 @@ export default function Login() {
     const signin = async ()=>{
       console.log(formData);
       const resp = await axios.post("http://localhost:8080/login", formData);
+      console.log(resp.data);
       if(resp.data.status==200)
       {
         console.log("loggedin successfully");
         localStorage.setItem("token", resp.data.token);
+        navigate("/");
       }
     };
 
@@ -33,6 +35,7 @@ export default function Login() {
       {
         console.log("loggedin successfully");
         localStorage.setItem("token", resp.data.token);
+        navigate("/");
       }
     };
   return (
@@ -80,10 +83,7 @@ export default function Login() {
           onChange={handleChange}
           />
           <br/>
-          {/* <input type='text' placeholder='Email'
-          name='email'
-          onChange={handleChange}
-          ></input> */}
+          
           <br/>
           <label className="form__label" for="password">Password </label>
           <input type='password' placeholder='Password'
@@ -116,92 +116,4 @@ export default function Login() {
   )
 }
 
-{/* // import React, { Component, useState } from "react";
-
-// export default function Login() { */}
-{/* //   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-
-//   function handleSubmit(e) { */}
-{/* //     e.preventDefault();
-
-//     console.log(email, password);
-//     fetch("http://localhost:3000/login-user", { */}
-//       method: "POST",
-//       crossDomain: true,
-//       headers: {
-//         "Content-Type": "application/json",
-//         Accept: "application/json",
-//         "Access-Control-Allow-Origin": "*",
-//       },
-//       body: JSON.stringify({
-//         email,
-//         password,
-//       }),
-//     })
-//       .then((res) => res.json())
-//       .then((data) => {
-//         console.log(data, "userRegister");
-//         if (data.status == "ok") {
-//           alert("login successful");
-//           window.localStorage.setItem("token", data.data);
-//           window.localStorage.setItem("loggedIn", true);
-
-//           window.location.href = "./userDetails";
-//         }
-//       });
-//   }
-
-//   return (
-//     <div className="auth-wrapper">
-//       <div className="auth-inner">
-//         <form onSubmit={handleSubmit}>
-//           <h3>Sign In</h3>
-
-//           <div className="mb-3">
-//             <label>Email address</label>
-//             <input
-//               type="email"
-//               className="form-control"
-//               placeholder="Enter email"
-//               onChange={(e) => setEmail(e.target.value)}
-//             />
-//           </div>
-
-//           <div className="mb-3">
-//             <label>Password</label>
-//             <input
-//               type="password"
-//               className="form-control"
-//               placeholder="Enter password"
-//               onChange={(e) => setPassword(e.target.value)}
-//             />
-//           </div>
-
-//           <div className="mb-3">
-//             <div className="custom-control custom-checkbox">
-//               <input
-//                 type="checkbox"
-//                 className="custom-control-input"
-//                 id="customCheck1"
-//               />
-//               <label className="custom-control-label" htmlFor="customCheck1">
-//                 Remember me
-//               </label>
-//             </div>
-//           </div>
-
-//           <div className="d-grid">
-//             <button type="submit" className="btn btn-primary">
-//               Submit
-//             </button>
-//           </div>
-//           <p className="forgot-password text-right">
-//             <a href="/sign-up">Sign Up</a>
-//           </p>
-//         </form>
-//       </div>
-//     </div>
-//   );
-// }
 
